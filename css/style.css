@@ -13,11 +13,14 @@ header h1 {
 
 div#content div.prevision {
   background-color : white;
+  text-align: center;
+  padding: 0;
+  margin:0;
 }
 
 div#content div.prevision div {
-  display : inline-block;
-  width   : 48%;
+  display: inline-table;
+  width: 45%;
 }
 
 h3 {
@@ -25,10 +28,11 @@ h3 {
   vertical-align : top;
 }
 
-div#content div.prevision p {
-  display        : inline-block;
-  width          : 20%;
-  vertical-align : top;
+
+div#content div.prevision td,
+div#content div.prevision th {
+  align-self: center;
+
 }
 
 div#content div.temps {
