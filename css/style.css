@@ -2,25 +2,46 @@ body {
   background-color : lightblue;
 }
 
-header h1 {
-  padding          : 10px;
+header {
   background-color : white;
   text-align       : center;
   font-family      : cursive;
-  font-size        : 50px;
   font-style       : italic;
 }
 
-div#content div.prevision {
+header h1 {
+  font-size : 4em;
+}
+
+#topbar button {
+  width            : 19%;
+  border           : none;
   background-color : white;
-  text-align: center;
+  background-color : lightblue;
+  font-size        : 2em;
+}
+
+#topbar button:hover
+{
+  background-color : #3ca1c3;
+}
+
+#topbar
+{
   padding: 0;
-  margin:0;
+  padding-bottom: 1em;
+}
+
+div#content div.prevision {
+  margin           : 0;
+  padding          : 0;
+  background-color : white;
+  text-align       : center;
 }
 
 div#content div.prevision div {
-  display: inline-table;
-  width: 45%;
+  display : inline-table;
+  width   : 45%;
 }
 
 h3 {
@@ -28,11 +49,9 @@ h3 {
   vertical-align : top;
 }
 
-
 div#content div.prevision td,
 div#content div.prevision th {
-  align-self: center;
-
+  align-self : center;
 }
 
 div#content div.temps {
