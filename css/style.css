@@ -4,45 +4,52 @@ body {
 
 header {
   background-color : white;
-  text-align       : center;
   font-family      : ;
   font-style       : italic;
+}
+
+.head {
+  text-align : center;
 }
 
 header h1 {
   font-size : 4em;
 }
 
+.logo {
+  position : absolute;
+  width    : 6em;
+  height   : 6em;
+}
+
 button {
   width            : 19%;
+  overflow         : hidden;
   border           : none;
+  border-top       : 0.1em solid white;
+  border-right     : 0.1em solid grey;
+  border-bottom    : 0.1em solid grey;
+  border-left      : 0.1em solid white;
   background-color : white;
   background-color : lightblue;
   font-size        : 2em;
-  border-right: 0.1em solid grey;
-  border-bottom: 0.1em solid grey;
-  border-left: 0.1em solid white;
-  border-top: 0.1em solid white;
 }
 
-button:hover
-{
+button:hover {
   background-color : #3ca1c3;
 }
 
-button:active
-{
+button:active {
+  border-top       : 0.1em solid grey;
+  border-right     : 0.1em solid white;
+  border-bottom    : 0.1em solid white;
+  border-left      : 0.1em solid grey;
   background-color : #3ca1c3;
-  border-left: 0.1em solid grey;
-  border-top: 0.1em solid grey;
-  border-right: 0.1em solid white;
-  border-bottom: 0.1em solid white;
 }
 
-#topbar
-{
-  padding: 0;
-  padding-bottom: 1em;
+#topbar {
+  padding        : 0;
+  padding-bottom : 1em;
 }
 
 div#content div.prevision {
@@ -63,7 +70,7 @@ h3 {
 }
 
 div#title h1 {
-  text-align: center;
+  text-align : center;
 }
 
 div#content div.prevision td,
@@ -105,8 +112,7 @@ div#bloc div.electrovanne {
   vertical-align : top;
 }
 
-div#bloc div.electrovanne button
-{
-  font-size: 1.5em;
-  width: 49.7%;
+div#bloc div.electrovanne button {
+  width     : 49.7%;
+  font-size : 1.5em;
 }
