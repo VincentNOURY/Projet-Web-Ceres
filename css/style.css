@@ -112,7 +112,31 @@ div#bloc div.electrovanne {
   vertical-align : top;
 }
 
-div#bloc div.electrovanne button {
+div#bloc div.electrovanne button, .container button {
   width     : 49.7%;
   font-size : 1.5em;
+}
+
+table{
+  text-align: center;
+  border-collapse : collapse;
+}
+
+td{
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
+
+.container{
+  text-align: center;
+  display: flex;
+}
+
+.container div{
+  width : 100%;
+}
+
+.container div table{
+  margin: auto;
+  border: 3px solid black;
 }
