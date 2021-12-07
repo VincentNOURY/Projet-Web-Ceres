@@ -2,10 +2,24 @@ body {
   background-color : lightblue;
 }
 
+#background {
+  z-index    : -1;
+  position   : fixed;
+  top        : 0;
+  right      : 0;
+  bottom     : 0;
+  left       : 0;
+  width      : 100vw;
+  height     : 100vh;
+  object-fit : cover;
+}
+
+.transparent {
+  background-color : rgba(255, 255, 255, 0.3);
+}
+
 header {
-  background-color : white;
-  font-family      : ;
-  font-style       : italic;
+  font-style : italic;
 }
 
 .head {
@@ -30,7 +44,6 @@ button {
   border-right     : 0.1em solid grey;
   border-bottom    : 0.1em solid grey;
   border-left      : 0.1em solid white;
-  background-color : white;
   background-color : lightblue;
   font-size        : 2em;
 }
@@ -53,10 +66,9 @@ button:active {
 }
 
 div#content div.prevision {
-  margin           : 0;
-  padding          : 0;
-  background-color : white;
-  text-align       : center;
+  margin     : 0;
+  padding    : 0;
+  text-align : center;
 }
 
 div#content div.prevision div {
@@ -78,10 +90,6 @@ div#content div.prevision th {
   align-self : center;
 }
 
-div#content div.temps {
-  background-color : white;
-}
-
 div#content div.prevision h2 {
   text-align : center;
 }
@@ -91,9 +99,8 @@ div#content div.temps h2 {
 }
 
 div#bloc div {
-  display          : inline-block;
-  width            : 49.8%;
-  background-color : white;
+  display : inline-block;
+  width   : 49.8%;
 }
 
 div#bloc div.capteurs h2 {
@@ -112,31 +119,32 @@ div#bloc div.electrovanne {
   vertical-align : top;
 }
 
-div#bloc div.electrovanne button, .container button {
+.container button,
+div#bloc div.electrovanne button {
   width     : 49.7%;
   font-size : 1.5em;
 }
 
-table{
-  text-align: center;
+table {
   border-collapse : collapse;
+  text-align      : center;
 }
 
-td{
-  border-left: 3px solid black;
-  border-right: 3px solid black;
+td {
+  border-right : 3px solid black;
+  border-left  : 3px solid black;
 }
 
-.container{
-  text-align: center;
-  display: flex;
+.container {
+  display    : flex;
+  text-align : center;
 }
 
-.container div{
+.container div {
   width : 100%;
 }
 
-.container div table{
-  margin: auto;
-  border: 3px solid black;
+.container div table {
+  margin : auto;
+  border : 3px solid black;
 }
