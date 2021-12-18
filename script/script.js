@@ -11,18 +11,64 @@ function ajoute(){
   table.appendChild(tr);
 }
 
-function getMeteo(){
-  fetch("http://www.infoclimat.fr/public-api/gfs/json\
-    ?_ll=48.85341,2.3488&_auth=AhhTRFMtBCYDLgA3D3lReFI6BjMPeQMkVysKaVo%2FUy4DaA\
-    BhAWFTNQdpUC0HKAo8V3pXNAE6AzNTOAN7CHpXNgJoUz9TOARjA2wAZQ8gUXpSfAZnDy8DJFc8C\
-    m9aKVM2A2UAegFjUzIHbVAsBzYKNldlVygBIQM6UzYDZwhhVzMCYFMzUzgEbwNkAH0PIFFjUmAG\
-    YA9mA2hXMQpsWjVTZQNmADcBYFM0B2BQLAc2CjxXYlcxATwDPlM2A2wIelcrAhhTRFMtBCYDLgA\
-    3D3lReFI0BjgPZA%3D%3D&_c=bc0b6c355d4a1f89b826625db56f406f")
-    .then((response) => response,json()).then(furction(data){
-    //define table with the data collected
+async function getMeteo(){
+  await sleep(10);
+  fetch("url/pluie.json")
+    .then((response) => response.json())
+    .then(function (data){
+      let meteo = document.querySelector("#pluie");
+      for (let i = 0; i < 8; i++){
+        let tr = document.createElement('tr');
+        const td1 = document.createElement("td");
+        td1.textContent=data[i.toString()]['heure'];
+
+        const td2 = document.createElement('td');
+        td2.textContent=data[i.toString()]['pluie0'];
+
+        const td3 = document.createElement('td');
+        td3.textContent=data[i.toString()]['pluie1'];
+
+        const td4 = document.createElement('td');
+        td4.textContent=data[i.toString()]['pluie2'];
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+
+        meteo.appendChild(tr);
+      }
+
+  })
+
+  fetch("url/temperature.json")
+    .then((response) => response.json())
+    .then(function (data){
+      let meteo = document.querySelector("#temperature");
+      for (let i = 0; i < 8; i++){
+        let tr = document.createElement('tr');
+        const td1 = document.createElement("td");
+        td1.textContent=data[i.toString()]['heure'];
+
+        const td2 = document.createElement('td');
+        td2.textContent=data[i.toString()]['temp0'];
+
+        const td3 = document.createElement('td');
+        td3.textContent=data[i.toString()]['temp1'];
+
+        const td4 = document.createElement('td');
+        td4.textContent=data[i.toString()]['temp2'];
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+
+        meteo.appendChild(tr);
+      }
+
   })
 }
-
 getMeteo();
 
 function sleep(ms){
